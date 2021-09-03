@@ -42,7 +42,7 @@ const config = [
   },
   {
     name: 'webview',
-    mode: 'development',
+    mode: 'production',
     target: 'web',
 
     entry: './src/Webview/index.tsx',
