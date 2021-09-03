@@ -1,0 +1,72 @@
+{
+	"name": "vscode-rapidapi-caller",
+	"displayName": "vscode-rapidapi-caller",
+	"description": "Just a POC",
+	"publisher": "eliostruyf",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.59.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:rapidapi-caller.open",
+		"onCommand:cowsay.say"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "rapidapi-caller.open",
+				"title": "Call API",
+				"category": "Rapid API"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"test-compile": "tsc -p ./",
+		"test-watch": "tsc -watch -p ./",
+		"pretest": "npm run test-compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@headlessui/react": "^1.4.1",
+		"@heroicons/react": "^1.0.4",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"@types/node-fetch": "^2.5.12",
+		"@types/react": "^17.0.19",
+		"@types/react-dom": "^17.0.9",
+		"@types/vscode": "^1.59.0",
+		"@typescript-eslint/eslint-plugin": "^4.26.0",
+		"@typescript-eslint/parser": "^4.26.0",
+		"autoprefixer": "^10.3.3",
+		"css-loader": "^6.2.0",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"node-fetch": "^3.0.0",
+		"postcss": "^8.3.6",
+		"postcss-loader": "^6.1.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"shiki": "^0.9.10",
+		"style-loader": "^3.2.1",
+		"tailwindcss": "^2.2.9",
+		"ts-loader": "^9.2.2",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2",
+		"webpack": "^5.38.1",
+		"webpack-cli": "^4.7.0"
+	},
+	"dependencies": {
+		"@monaco-editor/react": "^4.2.2"
+	}
+}
